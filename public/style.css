@@ -1,6 +1,5 @@
 #defaultCanvas0 
 {
-  
   float:right;
   padding: 10px; 
   background-color: rgb(215, 241, 237);
@@ -8,9 +7,9 @@
 
 .site-title {
   margin: 0;
-  padding: 0 10px;
+  padding: 20px;
   text-align: center;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 100;
   background-color: rgb(191, 243, 235);
   color: rgb(105, 105, 105);
@@ -22,6 +21,7 @@ body {
 
 .menu {
   margin: 0 0 0 10px;
+  margin-right: 0px;
   margin-top: 20px;
   width: 200px;
   height: 400px;
@@ -36,11 +36,15 @@ body {
   font-size: 30px;
   font-weight: 100;
   margin-top:45px;
-  color: rgb(105, 105, 105);
   text-align: center;
   margin-left:-50px
 }
 
 .first {
   padding-top:60px;
+}
+
+a {
+  color: rgb(105, 105, 105);
+  text-decoration: none;
 }
