@@ -1,12 +1,9 @@
 #defaultCanvas0 
 {
-  display: block;
-  left:40%;
-  width:100px;
-  margin-left:-200px;
+  
+  float:right;
   padding: 10px; 
   background-color: rgb(215, 241, 237);
-  position: fixed;
 }
 
 .site-title {
@@ -16,7 +13,7 @@
   font-size: 30px;
   font-weight: 100;
   background-color: rgb(191, 243, 235);
-  color: rgb(18, 17, 17);
+  color: rgb(105, 105, 105);
 }
 
 body {
@@ -25,9 +22,9 @@ body {
 
 .menu {
   margin: 0 0 0 10px;
+  margin-top: 20px;
   width: 200px;
   height: 400px;
-  padding: 10;
   background-color: rgb(215, 241, 237); 
   
 }
@@ -36,4 +33,14 @@ body {
   list-style-type: none;
   display: block; 
   position: relative;
+  font-size: 30px;
+  font-weight: 100;
+  margin-top:45px;
+  color: rgb(105, 105, 105);
+  text-align: center;
+  margin-left:-50px
+}
+
+.first {
+  padding-top:60px;
 }
