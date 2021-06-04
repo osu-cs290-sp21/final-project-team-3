@@ -9,15 +9,36 @@ var pSize = 50;
 var score = 0;
 var boundaries;
 var boundary;
-
+var paused = false;
 function setup() 
 {
+
     var canvas = createCanvas(1000, 1000);
     background("#081217");
 	player = createSprite(25,500,pSize,pSize);
 	rocks = new Group();
 	boundaries = new Group();
 }
+
+function pauseMenu()
+{
+	if(!paused)
+	{
+		console.log("PAUSED");
+		//later: add a HTML pause screen
+		//open HTML pause screen
+		paused = true;
+		noLoop();
+	}
+
+	else
+	{
+		paused = false;
+		loop();
+	}
+
+}
+
 
 function mousePressed() 
 {
@@ -129,3 +150,12 @@ function draw()
 	drawSprites();
 
 }
+
+document.addEventListener('keyup', function(event) 
+{
+	if(event.keyCode === 80)
+	{	
+		console.log("KEYDOWN");
+		pauseMenu();
+	}
+});
