@@ -11,12 +11,12 @@ var boundaries;
 var boundary;
 var paused = false;
 
-var Cheight = screen.height * 0.75;
-var Clength = screen.availWidth * 0.75;
+var Cheight = 500;
+var Clength = 800;
 
 function setup() 
 {
-console.log(Cheight);
+    pauseMenu();
     var canvas = createCanvas(Clength, Cheight);
     background("#96c9e3");
 	player = createSprite((Cheight/2)-25,Cheight/2,pSize,pSize);
@@ -28,15 +28,17 @@ function pauseMenu()
 {
 	if(!paused)
 	{
+
+		document.getElementsByClassName("menu")[0].style.visibility = "visible";
 		console.log("PAUSED");
-		//later: add a HTML pause screen
-		//open HTML pause screen
 		paused = true;
 		noLoop();
 	}
 
 	else
 	{
+		console.log("unpause")
+		document.getElementsByClassName("menu")[0].style.visibility = "hidden";
 		paused = false;
 		loop();
 	}
@@ -47,7 +49,6 @@ function jump(){ if(!dead) player.velocity.y += -25;}
 
 function mousePressed() 
 {
-	jump();	
 }
 
 function deathScreen()
@@ -62,7 +63,6 @@ function death()
 	player.velocity.y = 20;
 	if(player.bounce(rocks)) player.velocity.y = 0;
 	for(var i = 0; i < rocks.length; i ++)rocks.get(i).velocity.x=0;
-
 	for(var i = 0; i < boundaries.length; i ++) boundaries.get(i).velocity.x = 0;
 	deathScreen();
 }
@@ -132,6 +132,7 @@ function checkCollision()
 
 function draw() 
 {
+if(!paused){
     background("#96c9e3");
 		
 	checkCollision();
@@ -139,7 +140,6 @@ function draw()
 	
 	if(dead) //DEAD
 	{
-		console.log("Oh no! You have died.");
 		death();
 	}
 	else //NOT DEAD
@@ -154,7 +154,7 @@ function draw()
 		noLoop();
 	} 
 
-	
+}	
 	drawSprites();
 
 }
@@ -175,3 +175,12 @@ document.addEventListener('keydown', function(event)
 		jump();	
 	}
 });
+
+
+window.onload = function()
+{
+	document.getElementById("playBtn").addEventListener('click', function()
+	{
+		pauseMenu();
+	});
+}
