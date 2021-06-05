@@ -124,14 +124,14 @@ function checkCollision()
 
 function draw() 
 {
-    background("#081217");
+    background("#96c9e3");
 		
 	checkCollision();
 	checkScore();
 	
 	if(dead) //DEAD
 	{
-		console.log("DEATH COMES FOR US ALL");
+		console.log("Oh no! You have died.");
 		death();
 	}
 	else //NOT DEAD
