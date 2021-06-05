@@ -10,12 +10,16 @@ var score = 0;
 var boundaries;
 var boundary;
 var paused = false;
+
+var Cheight = screen.height * 0.75;
+var Clength = screen.availWidth * 0.75;
+
 function setup() 
 {
-
-    var canvas = createCanvas(1000, 1000);
+console.log(Cheight);
+    var canvas = createCanvas(Clength, Cheight);
     background("#96c9e3");
-	player = createSprite(475,500,pSize,pSize);
+	player = createSprite((Cheight/2)-25,Cheight/2,pSize,pSize);
 	rocks = new Group();
 	boundaries = new Group();
 }
@@ -94,12 +98,12 @@ function createRocks()
 			direction = random(0,2);
 			
 			if (direction < 1) direction = 0;
-			else direction = 1000;
+			else direction = height;
 			
-			boundary = createSprite(1000,1000,1,2000);
+			boundary = createSprite(Clength,Cheight,1,Cheight*2);
 			//boundary.visible = false;
 			
-			rock = createSprite(1000,direction,75,random(250,1000));
+			rock = createSprite(Clength,direction,75,random(Cheight/2,Cheight));
 			rock.velocity.x= speed;
 			rock.immovable = true;
 			boundary.velocity.x = speed;
@@ -113,11 +117,11 @@ function checkCollision()
 {
 	if(rocks.collide(player)) dead = true;
 
-	if(player.position.y >= 1000-(pSize/2))
+	if(player.position.y >= Cheight-(pSize/2))
 	{
 		dead = true;
 		player.velocity.y = 0;
-		player.position.y = 1000-(pSize/2);
+		player.position.y = Cheight-(pSize/2);
 	}
 	if(player.position.y <= 0)
 	{
@@ -144,7 +148,7 @@ function draw()
 		createRocks();
 	}
 	
-	if(dead && player.position.y >= 1000-(pSize/2)) 
+	if(dead && player.position.y >= Cheight-(pSize/2)) 
 	{
 		console.log("Score: " + score);
 		noLoop();
