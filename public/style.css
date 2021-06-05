@@ -25,8 +25,8 @@ body {
 }
 
 .menu {
-  top: 0;
-  bottom: 0;
+  top: 5;
+  bottom: 5;
   left: 0;
   right: 0;
   position: fixed;
@@ -43,13 +43,13 @@ body {
   position: relative;
   font-size: 30px;
   font-weight: 100;
-  margin-top:45px;
+  margin-top:60px;
   text-align: center;
   margin-left:-50px
 }
 
 .first {
-  padding-top:60px;
+  padding-top:30px;
 }
 
 a {
