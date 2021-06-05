@@ -15,7 +15,7 @@ function setup()
 
     var canvas = createCanvas(1000, 1000);
     background("#96c9e3");
-	player = createSprite(25,500,pSize,pSize);
+	player = createSprite(475,500,pSize,pSize);
 	rocks = new Group();
 	boundaries = new Group();
 }
@@ -48,8 +48,9 @@ function mousePressed()
 
 function death()
 {	
+
 	player.velocity.y = 20;
-	
+	if(player.bounce(rocks)) player.velocity.y = 0;
 	for(var i = 0; i < rocks.length; i ++)rocks.get(i).velocity.x=0;
 
 	for(var i = 0; i < boundaries.length; i ++) boundaries.get(i).velocity.x = 0;
