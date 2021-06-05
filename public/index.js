@@ -39,11 +39,11 @@ function pauseMenu()
 
 }
 
+function jump(){ if(!dead) player.velocity.y += -25;}
 
 function mousePressed() 
 {
-	if(!dead) player.velocity.y += - 25;
-	
+	jump();	
 }
 
 function deathScreen()
@@ -72,10 +72,6 @@ function checkScore()
 			score ++;	
 		}
 		
-		if(score / 10 >= 1)
-		{
-			speed = speed * score/10
-		}
 	}
 
 }
@@ -165,5 +161,13 @@ document.addEventListener('keyup', function(event)
 	{	
 		console.log("KEYDOWN");
 		pauseMenu();
+	}
+});
+
+document.addEventListener('keydown', function(event)
+{
+	if(event.keyCode == 32)
+	{
+		jump();	
 	}
 });
