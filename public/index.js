@@ -42,8 +42,14 @@ function pauseMenu()
 
 function mousePressed() 
 {
-	player.velocity.y += - 25;
+	if(!dead) player.velocity.y += - 25;
 	
+}
+
+function deathScreen()
+{
+	//put up a death screen html thing
+	// should have a button that allows you to restart
 }
 
 function death()
@@ -54,6 +60,7 @@ function death()
 	for(var i = 0; i < rocks.length; i ++)rocks.get(i).velocity.x=0;
 
 	for(var i = 0; i < boundaries.length; i ++) boundaries.get(i).velocity.x = 0;
+	deathScreen();
 }
 
 function checkScore()
