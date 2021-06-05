@@ -48,3 +48,9 @@ a {
   color: rgb(105, 105, 105);
   text-decoration: none;
 }
+
+.scores {
+  margin: auto;
+  width: 50%;
+  height: 800px;
+}

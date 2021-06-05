@@ -14,7 +14,7 @@ function setup()
 {
 
     var canvas = createCanvas(1000, 1000);
-    background("#081217");
+    background("#96c9e3");
 	player = createSprite(25,500,pSize,pSize);
 	rocks = new Group();
 	boundaries = new Group();
@@ -142,7 +142,7 @@ function draw()
 	
 	if(dead && player.position.y >= 1000-(pSize/2)) 
 	{
-		console.log(score);
+		console.log("Score: " + score);
 		noLoop();
 	} 
 
