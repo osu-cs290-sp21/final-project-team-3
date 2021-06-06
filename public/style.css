@@ -75,3 +75,8 @@ a {
 .kelp {
   height: 120px;
 }
+
+.playerscore {
+  padding: 25px;
+  display: inline;
+}
