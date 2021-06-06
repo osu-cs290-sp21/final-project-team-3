@@ -35,7 +35,7 @@ body {
   left: 0;
   right: 0;
   position: absolute;
-  margin: 100px auto;
+  margin: 80px auto;
   width: 200px;
   height: 400px;
   background-color: rgb(215, 241, 237);  
@@ -79,4 +79,13 @@ a {
 .playerscore {
   padding: 25px;
   display: inline;
+}
+
+.instructions {
+  padding:20px
+}
+#howto {
+  margin-top:30%;
+  background: rgb(215, 241, 237);
+  width:100%;
 }
