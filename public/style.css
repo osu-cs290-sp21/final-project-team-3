@@ -78,11 +78,19 @@ a {
   display: inline;
 }
 
-.instructions {
-  padding:20px
-}
-#howto {
+#howto { /** container for instructions and header **/
   margin-top:30%;
   background: rgb(215, 241, 237);
   width:100%;
+}
+
+#header {
+  font-size: 30px;
+  font-weight: 100;
+  padding:20px;
+}
+#instructions {
+  font-size: 20px;
+  font-weight: 100;
+  padding:20px
 }
