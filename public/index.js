@@ -59,8 +59,7 @@ function mousePressed()
 
 function deathScreen()
 {
-	//put up a death screen html thing
-	// should have a button that allows you to restart
+	document.getElementsByClassName("dead")[0].style.visibility = "visible";
 }
 
 function death()
@@ -189,6 +188,10 @@ window.onload = function()
 	document.getElementById("playBtn").addEventListener('click', function()
 	{
 		if(!dead) pauseMenu();
-		else location.reload();
+	});
+	
+	document.getElementById("yes").addEventListener('click', function()
+	{
+		location.reload();	
 	});
 }
