@@ -10,9 +10,14 @@ var score = 0;
 var boundaries;
 var boundary;
 var paused = false;
-
+var playerImage;
 var Cheight = 500;
 var Clength = 800;
+
+function preload()
+{
+//playerImage = loadImage("public/pufferfish1.png");
+}
 
 function setup() 
 {
@@ -20,6 +25,7 @@ function setup()
     var canvas = createCanvas(Clength, Cheight);
     background("#96c9e3");
 	player = createSprite((Cheight/2)-25,Cheight/2,pSize,pSize);
+	//player.addImage(playerImage);
 	rocks = new Group();
 	boundaries = new Group();
 }
@@ -107,6 +113,7 @@ function createRocks()
 			rock.velocity.x= speed;
 			rock.immovable = true;
 			boundary.velocity.x = speed;
+			boundary.visible = false;
 			rocks.add(rock);
 			boundaries.add(boundary);
 			clock = 0;
@@ -181,6 +188,7 @@ window.onload = function()
 {
 	document.getElementById("playBtn").addEventListener('click', function()
 	{
-		pauseMenu();
+		if(!dead) pauseMenu();
+		else location.reload();
 	});
 }
