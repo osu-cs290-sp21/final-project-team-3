@@ -6,7 +6,7 @@
   right: 0;
   z-index: -1;
   position: absolute;
-  margin: 100px auto;
+  margin: 130px auto;
   background-color: rgb(215, 241, 237);
   border: solid 3px rgb(215, 241, 237);
 }
@@ -27,6 +27,7 @@ body {
   margin: 0;
   background-image: url(kelp1.png);
   background-repeat: repeat;
+ 
 }
 
 .menu {
@@ -35,9 +36,9 @@ body {
   left: 0;
   right: 0;
   position: absolute;
-  margin: 80px auto;
+  margin: 60px auto;
   width: 200px;
-  height: 400px;
+  height: 420px;
   background-color: rgb(215, 241, 237); 
   border: solid 3px rgb(215, 241, 237);
 }
@@ -53,13 +54,15 @@ body {
   position: relative;
   font-size: 30px;
   font-weight: 100;
-  margin-top:60px;
+  margin-top:65px;
   text-align: center;
-  margin-left:-50px
+  margin-left:-50px;
+  margin-bottom: 20px;
 }
 
 a {
-  color: rgb(105, 105, 105);
+  color: rgb(220, 201, 128);
+  text-shadow: 1px 1px  rgb(97, 95, 95);
   text-decoration: none;
 }
 
@@ -79,7 +82,7 @@ a {
 }
 
 #howto { /** container for instructions and header **/
-  margin-top:30%;
+  margin-top:35%;
   background: rgb(215, 241, 237);
   width:100%;
 }
@@ -87,10 +90,18 @@ a {
 #header {
   font-size: 30px;
   font-weight: 100;
-  padding:20px;
+  padding-top:20px;
+  padding-left:20px;
+  
 }
 #instructions {
   font-size: 20px;
   font-weight: 100;
-  padding:20px
+  padding-bottom:20px;
+  padding-left:20px;
+}
+
+.bubble {
+  width:25px;
+  height:25px;
 }
