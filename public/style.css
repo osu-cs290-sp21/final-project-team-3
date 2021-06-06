@@ -38,7 +38,8 @@ body {
   margin: 80px auto;
   width: 200px;
   height: 400px;
-  background-color: rgb(215, 241, 237);  
+  background-color: rgb(215, 241, 237); 
+  border: solid 3px rgb(215, 241, 237);
 }
 
 .dead
@@ -55,10 +56,6 @@ body {
   margin-top:60px;
   text-align: center;
   margin-left:-50px
-}
-
-.first {
-  padding-top:30px;
 }
 
 a {
