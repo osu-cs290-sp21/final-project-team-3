@@ -18,7 +18,9 @@
   font-size: 50px;
   font-weight: 100;
   background-color: rgb(191, 243, 235);
-  color: rgb(105, 105, 105);
+  color: rgb(220, 201, 128);
+  text-shadow: 1px 1px  rgb(0, 0, 0);
+  font-family: Oi, Helvetica, sans-serif;
 }
 
 body {
@@ -52,12 +54,17 @@ body {
   list-style-type: none;
   display: block; 
   position: relative;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 100;
   margin-top:65px;
   text-align: center;
   margin-left:-50px;
   margin-bottom: 20px;
+  font-family: 'Dela Gothic One', Helvetica, sans-serif;
+}
+
+.main {
+  font-size: 30px;
 }
 
 a {
@@ -89,9 +96,9 @@ a {
 
 #header {
   font-size: 30px;
-  font-weight: 100;
   padding-top:20px;
   padding-left:20px;
+  color:rgb(105, 105, 105);
   
 }
 #instructions {
@@ -99,6 +106,7 @@ a {
   font-weight: 100;
   padding-bottom:20px;
   padding-left:20px;
+  color:rgb(105, 105, 105);
 }
 
 .bubble {
