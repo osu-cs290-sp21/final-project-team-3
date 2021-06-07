@@ -55,6 +55,7 @@ function jump(){ if(!dead) player.velocity.y += -25;}
 
 function mousePressed() 
 {
+	jump()
 }
 
 function deathScreen()
