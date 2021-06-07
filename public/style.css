@@ -11,7 +11,7 @@
   border: solid 3px rgb(215, 241, 237);
 }
 
-.site-title {
+.site-title{
   margin: 0;
   padding: 21px;
   text-align: center;
@@ -20,7 +20,7 @@
   background-color: rgb(191, 243, 235);
   color: rgb(220, 201, 128);
   text-shadow: 1px 1px  rgb(0, 0, 0);
-  font-family: Oi, Helvetica, sans-serif;
+  font-family: 'Oi', Helvetica, sans-serif;
 }
 
 body {
@@ -112,4 +112,15 @@ a {
 .bubble {
   width:25px;
   height:25px;
+}
+
+#high-scores {
+  text-align: center;
+  padding-right: 20px;
+  position: relative;
+  font-size: 30px;
+  font-weight: 100;
+  margin-left:-50px;
+  margin-bottom: 20px;
+  font-family: 'Dela Gothic One', Helvetica, sans-serif;
 }
