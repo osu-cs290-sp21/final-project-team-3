@@ -17,7 +17,7 @@
   left: 0;
   right: 0;
   z-index: 0;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .site-title{
@@ -52,6 +52,7 @@ body {
   height: 420px;
   background-color: rgb(215, 241, 237); 
   border: solid 3px rgb(215, 241, 237);
+  overflow: scroll;
 }
 
 .dead
@@ -126,10 +127,12 @@ a {
 #high-scores {
   text-align: center;
   padding-right: 20px;
+  padding-bottom: 10px;
   position: relative;
   font-size: 30px;
   font-weight: 100;
-  margin-left:-50px;
+  margin-left:-40px;
   margin-bottom: 20px;
   font-family: 'Dela Gothic One', Helvetica, sans-serif;
+  border-bottom: dotted rgba(9, 9, 9, 0.803);
 }
