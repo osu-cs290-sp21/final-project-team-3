@@ -1,5 +1,4 @@
-#defaultCanvas0 
-{
+#defaultCanvas0 {
   top: 0;
   bottom: 0;
   left: 0;
@@ -9,6 +8,16 @@
   margin: 130px auto;
   background-color: rgb(215, 241, 237);
   border: solid 3px rgb(215, 241, 237);
+}
+
+#menubackdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .site-title{

@@ -36,6 +36,7 @@ function pauseMenu()
 	{
 
 		document.getElementsByClassName("menu")[0].style.visibility = "visible";
+		document.getElementById("menubackdrop").style.visibility = "visible";
 		console.log("PAUSED");
 		paused = true;
 		noLoop();
@@ -45,6 +46,7 @@ function pauseMenu()
 	{
 		console.log("unpause")
 		document.getElementsByClassName("menu")[0].style.visibility = "hidden";
+		document.getElementById("menubackdrop").style.visibility = "hidden";
 		paused = false;
 		loop();
 	}
@@ -61,6 +63,7 @@ function mousePressed()
 function deathScreen()
 {
 	document.getElementsByClassName("dead")[0].style.visibility = "visible";
+	document.getElementById("menubackdrop").style.visibility = "visible";
 }
 
 function death()
