@@ -82,6 +82,12 @@ a {
   text-shadow: 1px 1px  rgb(97, 95, 95);
   text-decoration: none;
 }
+p
+{
+  color: rgb(220, 201, 128);
+  text-shadow: 1px 1px rgb(97, 95, 95);
+  text-decoration: none;
+}
 
 .scores {
   margin: auto;

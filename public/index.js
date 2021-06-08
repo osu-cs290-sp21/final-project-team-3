@@ -14,11 +14,14 @@ var playerImage;
 var Cheight = 500;
 var Clength = 800;
 
+//currently does not work until we get an image to serve on the server, possibly never
 function preload()
 {
 //playerImage = loadImage("public/pufferfish1.png");
 }
 
+
+// this function is run before creating the canvas, anything that needs to be "set up" should be in here.
 function setup() 
 {
     pauseMenu();
@@ -30,6 +33,8 @@ function setup()
 	boundaries = new Group();
 }
 
+
+//pause menu, loads and unloads the html that serves as the menu, also turns on the loop or noLoop functions, which will effectively pause the game
 function pauseMenu()
 {
 	if(!paused)
@@ -53,29 +58,36 @@ function pauseMenu()
 
 }
 
+//extremely basic jump function
 function jump(){ if(!dead) player.velocity.y += -25;}
 
+
+//anything that should be activated through a mouse press should be in here
 function mousePressed() 
 {
 	jump()
 }
 
+//death screen
 function deathScreen()
 {
+	document.getElementById("again").textContent = "your Score: " + score;
 	document.getElementsByClassName("dead")[0].style.visibility = "visible";
 	document.getElementById("menubackdrop").style.visibility = "visible";
 }
 
+//anything that happens when the player dies, like making the player fall down
 function death()
 {	
 
 	player.velocity.y = 20;
-	if(player.bounce(rocks)) player.velocity.y = 0;
-	for(var i = 0; i < rocks.length; i ++)rocks.get(i).velocity.x=0;
 	for(var i = 0; i < boundaries.length; i ++) boundaries.get(i).velocity.x = 0;
+	for(var i = 0; i < rocks.length; i ++) rocks.get(i).velocity.x = 0;
+	if(player.bounce(rocks)) player.velocity.y = 0;
 	deathScreen();
 }
 
+//this checks if the player ever touches a boundary line, which will increment the score
 function checkScore()
 {
 	for(var i = 0; i < boundaries.length; i ++)
@@ -89,6 +101,8 @@ function checkScore()
 
 }
 
+//this function gets called by using the overlap property/function, which automatically uses the two objects in contact as parameters (very useful) this just removes the boundary line
+//so the player doesn't constantly contact the boundary line.
 function Scored(a,b)
 {
 	console.log(score);
@@ -97,6 +111,7 @@ function Scored(a,b)
 	
 }
 
+//this function creates the rocks every couple of seconds, sets a random direction (up or down) and sets their speeds.
 function createRocks()
 {
 		var direction
@@ -123,6 +138,7 @@ function createRocks()
 		}			
 }
 
+//this function checks if the player ever contacts a surface. If it is a wall, they die, if it is the upper screen, the player doesn't fly off the map, if it is the lower screen, they die.
 function checkCollision()
 {
 	if(rocks.collide(player)) dead = true;
@@ -140,9 +156,12 @@ function checkCollision()
 	}
 }
 
+
+//main function, this function gets called every tick, DO NOT PUT ANY WHILE LOOPS IN HERE, IT WILL BREAK
 function draw() 
 {
 if(!paused){
+    //VERY IMPORTANT, DO NOT REMOVE, SPRITES DO NOT REDRAW THEMSELVES
     background("#96c9e3");
 		
 	checkCollision();
@@ -169,6 +188,7 @@ if(!paused){
 
 }
 
+//these just check the various key shortcuts like space for jump or P for pause
 document.addEventListener('keyup', function(event) 
 {
 	if(event.keyCode === 80)
