@@ -145,8 +145,9 @@ p
 }
 
 #updatingscore {
+  margin-top:38%;
   background: rgb(215, 241, 237);
-  width:15%;
+  width:100%;
   font-size: 30px;
   font-family: 'Dela Gothic One', Helvetica, sans-serif;
   padding: 20px;
@@ -177,10 +178,10 @@ input[type=submit] {
 }
 
 input[type=text]:focus {
-  border: 3px solid rgb(85, 85, 85)30, 82, 138)30, 82, 138);
+  border: 3px solid rgb(85, 85, 85);
 }
 
-#again {
+#again2 {
   background: rgb(215, 241, 237);
   width:15%;
   font-size: 30px;
