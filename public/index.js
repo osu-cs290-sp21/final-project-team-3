@@ -13,7 +13,7 @@ var paused = false;
 var playerImage;
 var Cheight = 500;
 var Clength = 800;
-
+var name
 //currently does not work until we get an image to serve on the server, possibly never
 
 function preload()
@@ -198,8 +198,16 @@ document.addEventListener('keyup', function(event)
 	}
 });
 
+
 window.onload = function()
 {
+var object = {
+Name: name,
+Score: score
+}
+var saveMenu = document.getElementById("save");
+
+	saveMenu.style.visibility = "hidden";
 	document.getElementById("playBtn").addEventListener('click', function()
 	{
 		console.log("play");
@@ -210,14 +218,24 @@ window.onload = function()
 	{
 		location.reload();	
 	});
-
-
-document.addEventListener('keydown', function(event)
-{
-	if(event.keyCode == 32)
+	
+	document.getElementById("record").addEventListener('click',function()
 	{
-		jump();	
-	}
+		saveMenu.style.visibility = "visible";
+	});
+
+	document.getElementById("submit").addEventListener('click',function()
+	{
+		saveMenu.style.visibility = "hidden";
+	
+	});	
+
+	document.addEventListener('keydown', function(event)
+	{
+		if(event.keyCode == 32)
+		{
+			jump();	
+		}
 });
 
 
