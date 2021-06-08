@@ -73,8 +73,6 @@ function mousePressed()
 //death screen
 function deathScreen()
 {
-	document.getElementById("again").textContent = "Score:  " + score;
-	document.getElementById("again2").textContent = "Score:  " + score;
 	document.getElementsByClassName("dead")[0].style.visibility = "visible";
 	document.getElementById("menubackdrop").style.visibility = "visible";
 }
