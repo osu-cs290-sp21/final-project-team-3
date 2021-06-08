@@ -67,12 +67,13 @@ function jump(){ if(!dead) player.velocity.y += -25;}
 function mousePressed() 
 {
 	jump()
+	document.getElementById("updatingscore").textContent = "Score:  " + score;
 }
 
 //death screen
 function deathScreen()
 {
-	document.getElementById("again").textContent = "your Score: " + score;
+	document.getElementById("again").textContent = "Score:  " + score;
 	document.getElementsByClassName("dead")[0].style.visibility = "visible";
 	document.getElementById("menubackdrop").style.visibility = "visible";
 }
