@@ -153,7 +153,6 @@ p
   color:rgb(220, 201, 128);
 }
 form {
-  margin-top:30%;
   padding:20px;
   width:100%;
   background: rgb(215, 241, 237);
@@ -179,4 +178,12 @@ input[type=submit] {
 
 input[type=text]:focus {
   border: 3px solid rgb(85, 85, 85)30, 82, 138)30, 82, 138);
+}
+
+#again {
+  background: rgb(215, 241, 237);
+  width:15%;
+  font-size: 30px;
+  font-family: 'Dela Gothic One', Helvetica, sans-serif;
+  color:rgb(220, 201, 128);
 }
