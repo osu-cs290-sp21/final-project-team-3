@@ -144,10 +144,30 @@ p
 }
 
 #updatingscore {
-  margin-top:40%;
   background: rgb(215, 241, 237);
-  width:100%;
+  width:15%;
   font-size: 30px;
   padding: 20px;
   color:rgb(105, 105, 105);
+}
+form {
+  margin-top:30%;
+  padding:20px;
+  width:100%;
+  background: rgb(215, 241, 237);
+}
+label {
+  font-size: 30px;
+  color:rgb(105, 105, 105);
+}
+
+input[type=text] {
+  width: 15%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus {
+  border: 3px solid rgb(85, 85, 85)30, 82, 138)30, 82, 138);
 }
