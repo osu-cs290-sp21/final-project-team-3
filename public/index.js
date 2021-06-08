@@ -40,12 +40,11 @@ function pauseMenu()
 {
 	if(!paused)
 	{
-
+		noLoop();
 		document.getElementsByClassName("menu")[0].style.visibility = "visible";
 		document.getElementById("menubackdrop").style.visibility = "visible";
 		console.log("PAUSED");
 		paused = true;
-		noLoop();
 	}
 
 	else
@@ -67,14 +66,11 @@ function jump(){ if(!dead) player.velocity.y += -25;}
 function mousePressed() 
 {
 	jump()
-	document.getElementById("updatingscore").textContent = "Score:  " + score;
 }
 
 //death screen
 function deathScreen()
 {
-	document.getElementById("again").textContent = "Score:  " + score;
-	document.getElementById("again2").textContent = "Score:  " + score;
 	document.getElementsByClassName("dead")[0].style.visibility = "visible";
 	document.getElementById("menubackdrop").style.visibility = "visible";
 }
@@ -97,7 +93,6 @@ function checkScore()
 	{
 		if(boundaries.overlap(player, Scored)) 
 		{
-			score ++;	
 		}
 		
 	}
@@ -108,10 +103,12 @@ function checkScore()
 //so the player doesn't constantly contact the boundary line.
 function Scored(a,b)
 {
+	score ++;
 	console.log(score);
 	boundaries.remove(a);
 	a.remove();
 	
+	document.getElementById("updatingscore").textContent = "Score:  " + score;
 }
 
 //this function creates the rocks every couple of seconds, sets a random direction (up or down) and sets their speeds.
