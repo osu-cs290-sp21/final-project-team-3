@@ -188,3 +188,10 @@ input[type=text]:focus {
   font-family: 'Dela Gothic One', Helvetica, sans-serif;
   color:rgb(220, 201, 128);
 }
+
+#save {
+  width:100%;
+  height:100%;
+  position: fixed;
+  background: rgb(215, 241, 237);
+}
