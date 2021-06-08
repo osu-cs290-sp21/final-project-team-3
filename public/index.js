@@ -15,9 +15,10 @@ var Cheight = 500;
 var Clength = 800;
 
 //currently does not work until we get an image to serve on the server, possibly never
+
 function preload()
 {
-//playerImage = loadImage("public/pufferfish1.png");
+	playerImage = loadImage("/pufferfish2.png");
 }
 
 
@@ -28,7 +29,7 @@ function setup()
     var canvas = createCanvas(Clength, Cheight);
     background("#96c9e3");
 	player = createSprite((Cheight/2)-25,Cheight/2,pSize,pSize);
-	//player.addImage(playerImage);
+	player.addImage(playerImage);
 	rocks = new Group();
 	boundaries = new Group();
 }
@@ -80,7 +81,7 @@ function deathScreen()
 function death()
 {	
 
-	player.velocity.y = 20;
+	player.velocity.y = 20;	
 	for(var i = 0; i < boundaries.length; i ++) boundaries.get(i).velocity.x = 0;
 	for(var i = 0; i < rocks.length; i ++) rocks.get(i).velocity.x = 0;
 	if(player.bounce(rocks)) player.velocity.y = 0;
@@ -198,6 +199,20 @@ document.addEventListener('keyup', function(event)
 	}
 });
 
+window.onload = function()
+{
+	document.getElementById("playBtn").addEventListener('click', function()
+	{
+		console.log("play");
+		if(!dead) pauseMenu();
+	});
+	
+	document.getElementById("yes").addEventListener('click', function()
+	{
+		location.reload();	
+	});
+
+
 document.addEventListener('keydown', function(event)
 {
 	if(event.keyCode == 32)
@@ -207,15 +222,4 @@ document.addEventListener('keydown', function(event)
 });
 
 
-window.onload = function()
-{
-	document.getElementById("playBtn").addEventListener('click', function()
-	{
-		if(!dead) pauseMenu();
-	});
-	
-	document.getElementById("yes").addEventListener('click', function()
-	{
-		location.reload();	
-	});
 }
