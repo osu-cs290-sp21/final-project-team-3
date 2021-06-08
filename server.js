@@ -1,32 +1,33 @@
-
-
-
-
-var path = require('path');
-var express = require('express');
-var exphbs = require('express-handlebars');
-
-var app = express();
-var port = process.env.PORT || 3000;
-
-app.engine('handlebars', exphbs({defaultLayout: 'html'}));
-app.set('view engine', 'handlebars');
-
-app.use(express.static('public'));
-
-app.get('/',function (req,res)
-{
-});
-
-{
-app.get('scoreboard', function (req,res)
-});
-
-app.get('*', function (req, res) {
-  res.status(404).render('404');
-});
-
-app.listen(port, function () {
-  console.log("== Server is listening on port", port);
-});
-
+var http = require('http');
+var fs = require('fs');
+var path=require('path');
+const port = 3000;
+var static=fs.readdirSync('./public');
+var files={}
+static.forEach(function (filename) { 
+	var data=fs.readFileSync(path.join('./public',filename))
+	files[filename.toLowerCase()]=data;
+})
+var server = http.createServer(function (req, res){
+	var x = req.url;
+	x=x.substr(1);
+	console.log(x);
+	x.toLowerCase()
+	if(''==x)
+		x='index.html';
+	var filetype;
+	if (path.extname(x) == '.html')
+	   filetype='text/html'
+	if (path.extname(x) == '.css')
+	   filetype='text/css'
+	if (path.extname(x) == '.js')
+	   filetype='text/javascript'
+	if (path.extname(x) == '.ico')
+	   filetype='text/icon'
+	res.writeHead(200,{'Content-Type':filetype});
+	res.write(files[x])
+	res.end();
+})
+server.listen(3000);
+console.log('Server Started listening on 3000');
+console.log('index.html');
