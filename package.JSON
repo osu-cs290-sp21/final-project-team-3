@@ -1,0 +1,27 @@
+{
+  "name": "final-project-team-3",
+  "version": "1.0.0",
+  "description": "Dynamic content with Express and Handlebars",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "handlebars public/twit.handlebars -f public/twitTemplate.js",
+    "prestart": "npm run build",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/osu-cs290-sp21/final-project-team-3.git"
+  },
+  "author": "Senna, Max Fu, Tanya Bihari, Alanna Croysdale",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/osu-cs290-sp21/final-project-team-3.git"
+  },
+  "homepage": "https://github.com/osu-cs290-sp21/final-project-team-3.git",
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.10"
+  }
+}
