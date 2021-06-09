@@ -195,3 +195,21 @@ input[type=text]:focus {
   position: fixed;
   background: rgb(215, 241, 237);
 }
+
+h2
+{
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Dela Gothic One', Helvetica, sans-serif;
+  color:rgb(220, 201, 128);
+}
+
+
+h3
+{
+  font-size:50px;
+  text-align: center;
+  font-family: 'Dela Gothic One', Helvetica, sans-serif;
+  color:rgb(220, 201, 128);
+}
+

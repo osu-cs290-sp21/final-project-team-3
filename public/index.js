@@ -204,7 +204,6 @@ window.onload = function()
 {
 	var saveMenu = document.getElementById("save");
 
-	saveMenu.style.visibility = "hidden";
 	document.getElementById("playBtn").addEventListener('click', function()
 	{
 		console.log("play");
@@ -218,17 +217,11 @@ window.onload = function()
 	
 	document.getElementById("record").addEventListener('click',function()
 	{
-		saveMenu.style.visibility = "visible";
-	});
-
-	document.getElementById("submit").addEventListener('click',function()
-	{
 		var request = new XMLHttpRequest();
-		request.open('POST', 'stats', true);		
+		request.open('POST', '/test', true);		
 
-		saveMenu.style.visibility = "hidden";
 		name = prompt("Please enter your name");
-		if(name == null) name = "guest";
+		if(name == null || name == "") name = "guest";
 		var Object = 
 		{
 			Name: name,
@@ -240,15 +233,22 @@ window.onload = function()
 		request.setRequestHeader('content-Type', 'application/json');
 		request.send(JObject);
 		console.log("SNET");
-	});	
 
-	document.addEventListener('keydown', function(event)
+	});
+
+	var bool = false;
+	document.getElementById("howBtn").addEventListener('click',function()
 	{
-		if(event.keyCode == 32)
+		
+		if(!bool)
 		{
-			jump();	
+			bool = true;
+			document.getElementById("menubackdrop").style.visibility = "hidden";
 		}
-});
-
-
+		else
+		{
+			bool = false;
+			document.getElementById("menubackdrop").style.visibility = "visible";
+		}
+	});
 }
