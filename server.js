@@ -2,6 +2,7 @@ var http = require('http');
 var fs = require('fs');
 var path=require('path');
 var express = require('express');
+//var exphbs = require('express-handlebars')
 var PORT = process.env.PORT || 3000;
 var static=fs.readdirSync('./public');
 var files={}
