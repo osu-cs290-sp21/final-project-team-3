@@ -42,5 +42,9 @@
   {
     "Name": "guest",
     "Score": 2
+  },
+  {
+    "Name": "HELLO",
+    "Score": 3
   }
 ]
