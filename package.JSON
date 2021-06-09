@@ -16,9 +16,9 @@
   "author": "Senna, Max Fu, Tanya Bihari, Alanna Croysdale",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/osu-cs290-sp21/final-project-team-3"
+    "url": "https://github.com/osu-cs290-sp21/final-project-team-3/issues"
   },
-  "homepage": "https://github.com/osu-cs290-sp21/final-project-team-3",
+  "homepage": "https://github.com/osu-cs290-sp21/final-project-team-3#readme",
   "dependencies": {
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
