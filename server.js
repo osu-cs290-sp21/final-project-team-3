@@ -1,9 +1,14 @@
 var http = require('http');
 var fs = require('fs');
 var path=require('path');
+var express = require('express');
 var PORT = process.env.PORT || 3000;
 var static=fs.readdirSync('./public');
 var files={}
+
+var app = express();
+app.use(express.json());
+
 
 static.forEach(function (filename) { 
 	var data=fs.readFileSync(path.join('./public',filename))
@@ -38,5 +43,10 @@ var server = http.createServer(function (req, res){
 })
 server.listen(PORT);
 console.log('Server Started listening on ' + PORT);
+
+app.post('stats', function(request,response)
+{
+	console.log(request.body);
+});
 
 

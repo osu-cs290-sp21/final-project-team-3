@@ -202,7 +202,7 @@ document.addEventListener('keyup', function(event)
 
 window.onload = function()
 {
-var saveMenu = document.getElementById("save");
+	var saveMenu = document.getElementById("save");
 
 	saveMenu.style.visibility = "hidden";
 	document.getElementById("playBtn").addEventListener('click', function()
@@ -223,6 +223,9 @@ var saveMenu = document.getElementById("save");
 
 	document.getElementById("submit").addEventListener('click',function()
 	{
+		var request = new XMLHttpRequest();
+		request.open('POST', 'stats', true);		
+
 		saveMenu.style.visibility = "hidden";
 		name = prompt("Please enter your name");
 		if(name == null) name = "guest";
@@ -231,7 +234,12 @@ var saveMenu = document.getElementById("save");
 			Name: name,
 			Score: score
 		}
-		console.log(Object);	
+		console.log(Object);
+
+		var JObject = JSON.stringify(Object);
+		request.setRequestHeader('content-Type', 'application/json');
+		request.send(JObject);
+		console.log("SNET");
 	});	
 
 	document.addEventListener('keydown', function(event)
