@@ -20,6 +20,14 @@
     "Score": 5
   },
   {
+    "Name": "HELLO",
+    "Score": 3
+  },
+  {
+    "Name": "guest",
+    "Score": 2
+  },
+  {
     "Name": "max fu ",
     "Score": 1
   },
@@ -32,19 +40,7 @@
     "Score": 0
   },
   {
-    "Name": "third",
+    "Name": "Senna",
     "Score": 0
-  },
-  {
-    "Name": "asd",
-    "Score": 0
-  },
-  {
-    "Name": "guest",
-    "Score": 2
-  },
-  {
-    "Name": "HELLO",
-    "Score": 3
   }
 ]
