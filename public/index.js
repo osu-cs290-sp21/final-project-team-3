@@ -13,7 +13,8 @@ var paused = false;
 var playerImage;
 var Cheight = 500;
 var Clength = 800;
-var name
+var name;
+
 //currently does not work until we get an image to serve on the server, possibly never
 
 function preload()
@@ -201,10 +202,6 @@ document.addEventListener('keyup', function(event)
 
 window.onload = function()
 {
-var object = {
-Name: name,
-Score: score
-}
 var saveMenu = document.getElementById("save");
 
 	saveMenu.style.visibility = "hidden";
@@ -227,7 +224,14 @@ var saveMenu = document.getElementById("save");
 	document.getElementById("submit").addEventListener('click',function()
 	{
 		saveMenu.style.visibility = "hidden";
-	
+		name = prompt("Please enter your name");
+		if(name == null) name = "guest";
+		var Object = 
+		{
+			Name: name,
+			Score: score
+		}
+		console.log(Object);	
 	});	
 
 	document.addEventListener('keydown', function(event)
